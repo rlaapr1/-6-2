@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#eaf4ff">
+<title>홍성 주변 병원 안내</title>
+<style>
+:root{--navy:#15345b;--blue:#2467b2;--sky:#eaf4ff;--ink:#243247;--muted:#65758b;--line:#d9e5f1;--green:#19836f;--paper:#fff}
+*{box-sizing:border-box}body{margin:0;background:#f3f7fb;color:var(--ink);font-family:system-ui,-apple-system,"Noto Sans KR",sans-serif;line-height:1.55}
+a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:980px;margin:auto;padding:22px 16px 48px}
+.hero{background:linear-gradient(130deg,#dceeff,#f8fbff 65%,#e5f5f0);border:1px solid #d4e5f7;border-radius:26px;padding:30px 26px;margin-bottom:20px}
+.kicker{font-size:13px;font-weight:800;color:#2670b8;letter-spacing:.04em}
+h1{font-size:clamp(30px,6vw,48px);line-height:1.15;margin:8px 0 12px;color:var(--navy);letter-spacing:-.04em}
+.hero p{margin:0;color:#4b6078;max-width:650px}
+.notice{margin-top:18px;padding:12px 14px;background:#fff8df;border:1px solid #f0dfa4;border-radius:14px;font-size:13px;color:#66511b}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
+input,select{font:inherit;border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:white;color:var(--ink)}
+input{flex:1;min-width:210px}select{min-width:145px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.card{background:white;border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 5px 18px #203c5b0a}
+.card h2{font-size:20px;margin:0;color:var(--navy)}
+.pill{display:inline-block;font-size:12px;font-weight:800;border-radius:999px;padding:4px 9px;background:#eaf2ff;color:#255d9d;margin:8px 0 10px}
+.meta{font-size:14px;margin:5px 0;color:#42546a}.meta b{color:#253b56}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin:13px 0}
+.btn{display:inline-block;padding:9px 12px;border-radius:10px;background:#edf5ff;font-size:13px;font-weight:750}
+.btn.primary{background:var(--blue);color:white}
+details{border-top:1px solid #edf1f6;margin-top:12px;padding-top:10px}
+summary{cursor:pointer;font-weight:800;color:#31577f}
+.detail{font-size:14px;color:#48596e;padding-top:8px}
+.detail ul{padding-left:19px;margin:7px 0}
+.hours{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px}
+.hours td,.hours th{border:1px solid var(--line);padding:7px;text-align:left}
+.hours th{background:#f4f8fc}
+.section{margin-top:28px}
+.section h2{font-size:23px;color:var(--navy)}
+.info{background:white;border:1px solid var(--line);border-radius:18px;padding:18px}
+.small{font-size:12px;color:var(--muted)}
+.sources li{margin:7px 0;font-size:13px}
+footer{text-align:center;color:#738197;font-size:12px;padding:28px 8px}
+@media(max-width:680px){.wrap{padding:14px 12px 34px}.hero{padding:24px 18px}.grid{grid-template-columns:1fr}.card{padding:16px}}
+</style>
+</head>
+<body>
+<main class="wrap">
+<header class="hero">
+  <div class="kicker">HONGSEONG · LOCAL HEALTH GUIDE</div>
+  <h1>홍성 주변 병원 안내</h1>
+  <p>홍성읍과 내포신도시 주변 의료기관 6곳의 위치, 연락처, 진료시간과 이용 방법을 모았습니다. 병원 이름을 누르거나 검색해서 필요한 정보를 확인하세요.</p>
+  <div class="notice"><b>방문 전 확인해 주세요.</b> 진료시간·점심시간·접수 마감·진료과목은 병원 사정에 따라 바뀔 수 있습니다. 아래 시간은 공개 자료를 정리한 참고 정보이며, 출발 전 전화로 당일 진료 여부를 확인해 주세요.</div>
+</header>
+
+<div class="toolbar">
+  <input id="q" type="search" placeholder="병원명·지역·진료과 검색" aria-label="병원 검색">
+  <select id="area" aria-label="지역 필터"><option value="">모든 지역</option><option>홍성읍</option><option>홍북읍</option></select>
+  <select id="type" aria-label="기관 유형 필터"><option value="">모든 기관</option><option>종합병원</option><option>의원</option><option>정신병원</option><option>요양병원</option></select>
+</div>
+
+<section class="grid" id="cards">
+<article class="card" data-area="홍성읍" data-type="종합병원" data-search="홍성의료원 종합병원 응급실 내과 외과 정형외과 신경과 신경외과 소아청소년과 산부인과 홍성읍">
+<h2>01. 충청남도 홍성의료원</h2><span class="pill">종합병원 · 응급실 운영</span>
+<p class="meta"><b>주소</b> 충남 홍성군 홍성읍 조양로 224</p>
+<p class="meta"><b>대표전화</b> <a href="tel:0416306114">041-630-6114</a></p>
+<p class="meta"><b>외래 안내</b> 평일 08:30–17:30 · 토/일 외래 휴진 안내</p>
+<p class="meta"><b>점심</b> 진료과·운영에 따라 확인 필요</p>
+<div class="actions"><a class="btn primary" href="tel:0416306492">진료예약 전화</a><a class="btn" target="_blank" rel="noopener" href="https://www.hsmc.or.kr/">공식 홈페이지</a><a class="btn" target="_blank" rel="noopener" href="https://map.naver.com/p/search/충청남도%20홍성의료원">길찾기</a></div>
+<details><summary>진료·예약 상세 안내</summary><div class="detail">
+<ul><li>여러 진료과를 운영하는 지역 거점 공공 종합병원입니다. 내과, 외과, 정형외과, 신경과, 신경외과, 소아청소년과 등 진료과별 운영 여부를 확인하세요.</li><li>전화 예약 안내 번호: <a href="tel:0416306492">041-630-6492</a></li><li>공식 홈페이지에서 진료과, 의료진 일정, 휴진 안내 및 온라인 예약 메뉴를 확인할 수 있습니다.</li><li>응급실은 연중 24시간 운영 안내가 있으나, 응급 상황은 119 또는 응급실에 먼저 문의하세요.</li></ul>
+</div></details>
+</article>
+
+<article class="card" data-area="홍북읍" data-type="의원" data-search="내포연합의원 홍북읍 내포신도시 가정의학과 내과 정형외과 신경외과 소아청소년과 이비인후과 피부과">
+<h2>02. 내포연합의원</h2><span class="pill">내포신도시 · 야간·휴일 진료 정보 있음</span>
+<p class="meta"><b>주소</b> 충남 홍성군 홍북읍 청사로 146, 센텀시티 2층</p>
+<p class="meta"><b>전화</b> <a href="tel:0416341197">041-634-1197</a></p>
+<p class="meta"><b>공개 진료시간 예시</b> 월–금 08:30–20:00 · 토 08:30–13:00 · 일 08:30–15:00</p>
+<p class="meta"><b>점심</b> 별도 확인 필요</p>
+<div class="actions"><a class="btn primary" href="tel:0416341197">전화 문의</a><a class="btn" target="_blank" rel="noopener" href="https://www.hira.or.kr/">심평원 병원정보</a><a class="btn" target="_blank" rel="noopener" href="https://map.naver.com/p/search/내포연합의원">길찾기</a></div>
+<details><summary>진료·예약 상세 안내</summary><div class="detail">
+<ul><li>공개 자료에는 가정의학과를 중심으로 내과, 정형외과, 신경외과, 소아청소년과, 이비인후과, 피부과 등이 안내되어 있습니다. 특정 검사·치료 가능 여부는 사전 문의가 필요합니다.</li><li>전화로 당일 진료과, 접수 마감, 대기 상황을 확인한 뒤 방문하는 것이 좋습니다.</li><li>요일별 진료시간이 자료마다 다르게 표시되는 경우가 있어, 특히 토·일요일 및 저녁 시간에는 반드시 전화 확인이 필요합니다.</li></ul>
+</div></details>
+</article>
+
+<article class="card" data-area="홍성읍" data-type="의원" data-search="건강성모의원 홍성읍 내과 외과 정형외과 신경외과 소아청소년과 이비인후과 피부과">
+<h2>03. 건강성모의원</h2><span class="pill">의원 · 토요일 진료 정보</span>
+<p class="meta"><b>주소</b> 충남 홍성군 홍성읍 홍성천길 198</p>
+<p class="meta"><b>전화</b> <a href="tel:0416322224">041-632-2224</a></p>
+<p class="meta"><b>공개 진료시간</b> 월–금 08:30–18:30 · 토 08:30–12:30 · 일 휴진</p>
+<p class="meta"><b>점심</b> 13:00–14:00로 안내된 자료 있음 · 전화 확인 권장</p>
+<div class="actions"><a class="btn primary" href="tel:0416322224">전화 문의</a><a class="btn" target="_blank" rel="noopener" href="https://www.hira.or.kr/">심평원 병원정보</a><a class="btn" target="_blank" rel="noopener" href="https://map.naver.com/p/search/건강성모의원%20홍성">길찾기</a></div>
+<details><summary>진료·예약 상세 안내</summary><div class="detail">
+<ul><li>공개된 진료과목에는 내과, 외과, 정형외과, 신경외과, 소아청소년과, 이비인후과 등이 포함됩니다.</li><li>온라인 예약 또는 앱 예약 지원 여부는 확인되지 않았으므로 전화로 예약 가능 여부와 당일 접수 마감 시간을 문의하세요.</li><li>점심시간은 자료별 표기가 다를 수 있어 방문 전 확인이 안전합니다.</li></ul>
+</div></details>
+</article>
+
+<article class="card" data-area="홍성읍" data-type="의원" data-search="홍주튼튼정형외과의원 홍성읍 정형외과 척추 관절 통증 물리치료">
+<h2>04. 홍주튼튼정형외과의원</h2><span class="pill">정형외과 · 근골격계 통증</span>
+<p class="meta"><b>주소</b> 충남 홍성군 홍성읍 홍성천길 214, 두리프라자 3층</p>
+<p class="meta"><b>전화</b> <a href="tel:0414068275">041-406-8275</a></p>
+<p class="meta"><b>공개 진료시간</b> 월–금 08:30–18:00 · 토 08:30–13:00 · 일 휴진</p>
+<p class="meta"><b>점심</b> 별도 확인 필요</p>
+<div class="actions"><a class="btn primary" href="tel:0414068275">전화 문의</a><a class="btn" target="_blank" rel="noopener" href="https://map.naver.com/p/search/홍주튼튼정형외과의원">길찾기</a></div>
+<details><summary>진료·예약 상세 안내</summary><div class="detail">
+<ul><li>정형외과 중심 의원으로 척추·관절·근골격계 통증과 물리치료 관련 진료를 문의할 수 있습니다.</li><li>진료 예약과 물리치료·주사 등 치료 예약이 별도로 운영될 수 있으니 전화로 구분해 확인하세요.</li><li>방문 후기 및 외부 안내에서 대기시간이 길 수 있다는 언급이 있어, 접수 가능 시간과 예상 대기를 미리 문의하는 편이 좋습니다.</li></ul>
+</div></details>
+</article>
+
+<article class="card" data-area="홍성읍" data-type="정신병원" data-search="홍성한국병원 홍성읍 정신건강의학과 정신병원">
+<h2>05. 홍성한국병원</h2><span class="pill">정신건강의학과</span>
+<p class="meta"><b>주소</b> 충남 홍성군 홍성읍 대내길 97</p>
+<p class="meta"><b>전화</b> <a href="tel:0416342088">041-634-2088</a></p>
+<p class="meta"><b>공개 진료시간</b> 월–금 09:00–17:00 · 토/일 휴진</p>
+<p class="meta"><b>점심</b> 12:00–13:30로 안내된 자료 있음 · 전화 확인 권장</p>
+<div class="actions"><a class="btn primary" href="tel:0416342088">전화 문의</a><a class="btn" target="_blank" rel="noopener" href="https://www2.uilwon.org/">홈페이지</a><a class="btn" target="_blank" rel="noopener" href="https://map.naver.com/p/search/홍성한국병원">길찾기</a></div>
+<details><summary>진료·예약 상세 안내</summary><div class="detail">
+<ul><li>정신건강의학과 진료기관으로 안내되어 있습니다.</li><li>초진 상담, 외래 진료, 입원 상담 가능 여부 및 준비 서류는 전화로 먼저 확인하세요.</li><li>접수시간과 실제 진료시간이 다를 수 있으므로 마감 직전 방문은 피하는 것이 좋습니다.</li></ul>
+</div></details>
+</article>
+
+<article class="card" data-area="홍성읍" data-type="요양병원" data-search="홍주요양병원 홍성읍 요양병원 입원 상담 내과 외과 흉부외과 한방과">
+<h2>06. 홍주요양병원</h2><span class="pill">요양병원 · 입원·돌봄 상담</span>
+<p class="meta"><b>주소</b> 충남 홍성군 홍성읍 백월로 130</p>
+<p class="meta"><b>전화</b> <a href="tel:0416322332">041-632-2332</a></p>
+<p class="meta"><b>공식 안내시간</b> 평일 08:30–17:00 · 토/일/공휴일 휴일</p>
+<p class="meta"><b>점심</b> 12:20–13:20</p>
+<div class="actions"><a class="btn primary" href="tel:0416322332">입원·진료 문의</a><a class="btn" target="_blank" rel="noopener" href="https://www.hjyy.co.kr/">공식 홈페이지</a><a class="btn" target="_blank" rel="noopener" href="https://map.naver.com/p/search/홍주요양병원">길찾기</a></div>
+<details><summary>입원·이용 상세 안내</summary><div class="detail">
+<ul><li>요양 및 장기 입원 돌봄을 위한 병원입니다. 일반 의원처럼 당일 외래 진료를 받는 곳과 이용 목적이 다릅니다.</li><li>공식 홈페이지에서 의료진, 진료 안내, 입·퇴원 안내, 비급여 안내를 확인할 수 있습니다.</li><li>입원 가능 여부, 병상 상황, 준비 서류, 비용, 간병 형태는 환자 상태에 따라 달라지므로 보호자가 전화 상담을 먼저 진행하세요.</li></ul>
+</div></details>
+</article>
+</section>
+
+<section class="section">
+<h2>방문 전에 꼭 확인할 것</h2>
+<div class="info">
+<ul>
+<li>전화로 오늘 진료하는지, 원하는 진료과가 운영되는지 확인하기</li>
+<li>점심시간과 접수 마감시간은 진료시간표와 다를 수 있으므로 확인하기</li>
+<li>초진 시 신분증과 기존 검사 결과·복용약 목록 챙기기</li>
+<li>요양병원은 외래 방문보다 입원 상담이 중심일 수 있으므로 목적을 먼저 설명하기</li>
+<li>응급 증상은 일반 외래 예약을 기다리지 말고 119 또는 응급실 이용하기</li>
+</ul>
+</div>
+</section>
+
+<section class="section">
+<h2>정보 출처 및 업데이트 안내</h2>
+<div class="info">
+<p class="small">병원 기본정보는 건강보험심사평가원 병원정보, 각 병원 공식 홈페이지 및 공개 진료시간 안내를 참고해 정리했습니다. 정보가 서로 다르거나 공식 확인이 어려운 항목은 '전화 확인'으로 표시했습니다.</p>
+<ul class="sources">
+<li><a target="_blank" rel="noopener" href="https://www.hsmc.or.kr/">충청남도 홍성의료원 공식 홈페이지</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.hira.or.kr/">건강보험심사평가원 병원·약국 찾기</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.hjyy.co.kr/">홍주요양병원 공식 홈페이지</a></li>
+<li><a target="_blank" rel="noopener" href="https://www2.uilwon.org/">홍성한국병원 홈페이지</a></li>
+</ul>
+<p class="small">이 페이지는 지역 의료기관 정보를 찾기 위한 참고 자료이며 특정 병원을 추천하거나 진료 가능 여부를 보증하지 않습니다. 진료시간·예약·진료과목은 변경될 수 있습니다. 응급 상황에는 119에 연락하세요.</p>
+</div>
+</section>
+<footer>건강한 홍성을 위한 병원 정보 안내 · 방문 전 전화 확인은 필수입니다.</footer>
+</main>
+<script>
+const q=document.getElementById('q'), area=document.getElementById('area'), type=document.getElementById('type');
+function filter(){const term=q.value.trim().toLowerCase();document.querySelectorAll('#cards .card').forEach(c=>{const okText=c.dataset.search.toLowerCase().includes(term)||c.innerText.toLowerCase().includes(term);const okArea=!area.value||c.dataset.area===area.value;const okType=!type.value||c.dataset.type===type.value;c.style.display=okText&&okArea&&okType?'':'none';});}
+[q,area,type].forEach(el=>el.addEventListener('input',filter));
+</script>
+</body></html>
